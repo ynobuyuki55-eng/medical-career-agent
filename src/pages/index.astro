@@ -1,0 +1,143 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+				margin-top: 3rem;
+			}
+			.feature-card {
+				text-align: left;
+			}
+			.feature-icon {
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+				display: block;
+			}
+			.feature-card h3 {
+				font-size: 1.25rem;
+				margin-top: 0;
+				color: var(--text-primary);
+			}
+			.trust-badge {
+				display: inline-block;
+				background: rgba(16, 185, 129, 0.1);
+				color: var(--accent);
+				padding: 0.25rem 0.75rem;
+				border-radius: 100px;
+				font-size: 0.85rem;
+				font-weight: 600;
+				margin-bottom: 1rem;
+				border: 1px solid rgba(16, 185, 129, 0.2);
+			}
+			.cta-section {
+				margin-top: 5rem;
+				text-align: center;
+				padding: 4rem 2rem;
+			}
+			.about-section {
+				margin-top: 4rem;
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+				align-items: center;
+				text-align: center;
+			}
+			@media (min-width: 768px) {
+				.about-section {
+					flex-direction: row;
+					text-align: left;
+					align-items: flex-start;
+				}
+			}
+			.profile-image {
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				object-fit: cover;
+				border: 3px solid var(--accent);
+				box-shadow: 0 4px 20px rgba(16, 185, 129, 0.2);
+			}
+			.profile-content {
+				flex: 1;
+			}
+			.profile-content h2 {
+				margin-top: 0;
+				margin-bottom: 0.5rem;
+				color: var(--text-primary);
+			}
+			.profile-content .role {
+				color: var(--accent);
+				font-size: 0.9rem;
+				font-weight: 600;
+				display: block;
+				margin-bottom: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="hero">
+				<span class="trust-badge">最新AI分析 × 転職成功データ</span>
+				<h1>あなたに最適な<br><span class="text-gradient">転職エージェント</span>をご提案</h1>
+				<p class="lead">
+					希望の年収、働き方、業界に合わせて、本当に頼りになる優良エージェントをAIが完全比較。理想のキャリアプランはここから始まります。
+				</p>
+				<a href="/blog" class="btn-primary">最新のエージェント比較を見る →</a>
+			</section>
+
+			<section class="features-grid">
+				<article class="glass-panel feature-card">
+					<span class="feature-icon">🏢</span>
+					<h3>非公開求人の圧倒的な質</h3>
+					<p>年収アップ、フルリモート、ホワイト企業など、一般には公開されない優良求人を多数保有するエージェントのみを厳選して紹介します。</p>
+				</article>
+
+				<article class="glass-panel feature-card">
+					<span class="feature-icon">📊</span>
+					<h3>サポート力と実績の透明な比較</h3>
+					<p>書類添削から面接対策、年収交渉まで、各エージェントの実際のサポート力を徹底比較。あなたの内定率を最大化するパートナーを見つけます。</p>
+				</article>
+
+				<article class="glass-panel feature-card">
+					<span class="feature-icon">🤖</span>
+					<h3>AIによるパーソナライズ</h3>
+					<p>あなたの年齢、現在の職種、希望条件を入力するだけで、最も転職成功率が高く、あなたのポテンシャルを引き出す最適なエージェントをAIが導き出します。</p>
+				</article>
+			</section>
+
+			<section class="glass-panel about-section">
+				<img src="/profile.png" alt="サイト運営者のプロフィール" class="profile-image" />
+				<div class="profile-content">
+					<h2>運営者について</h2>
+					<span class="role">元 労働環境に悩んでいた会社員</span>
+					<p>20代後半、毎日の終電帰りや休日出勤が当たり前の環境で働き、心身ともに疲弊していました。自力での転職活動はうまくいかず、何度も書類選考で落とされる日々。しかし、優秀な転職エージェントとの出会いが全てを変えました。</p>
+					<p>プロのキャリアアドバイザーによる徹底した自己分析と面接対策のおかげで、約3ヶ月後には第一志望の優良企業から内定を獲得。残業は激減し、年収も150万円アップするという大逆転を果たしました。</p>
+					<p>自分と同じように現状に不満を抱え、キャリアアップを諦めかけている方の助けになりたいと思い、自身の体験と最新の転職市場データに基づいた正しいエージェント選びの情報をお届けしています。</p>
+				</div>
+			</section>
+
+			<section class="glass-panel cta-section">
+				<h2>まずは最新のエージェント比較ランキングをチェック</h2>
+				<p>当サイトがデータを元に厳選した、今最も信頼できる転職エージェントの比較記事をご覧ください。</p>
+				<div style="margin-top: 2rem;">
+					<a href="/blog" class="btn-primary" style="background: var(--bg-surface-solid); border: 1px solid var(--accent); color: var(--accent) !important; box-shadow: none;">
+						記事一覧へ進む
+					</a>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

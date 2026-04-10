@@ -11,14 +11,14 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="ja">
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
 			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
+				width: 1000px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
 			}
 			.hero-image {
 				width: 100%;
@@ -26,32 +26,67 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.hero-image img {
 				display: block;
 				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
+				border-radius: 16px;
+				box-shadow: var(--glass-shadow);
+				width: 100%;
+                height: auto;
+                max-height: 500px;
+                object-fit: cover;
 			}
 			.prose {
-				width: 720px;
+				width: 800px;
 				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
+				margin: 3rem auto;
+				padding: 3rem 2rem;
+				color: var(--text-secondary);
+				border-radius: 16px;
 			}
 			.title {
-				margin-bottom: 1em;
+				margin-bottom: 2em;
 				padding: 1em 0;
 				text-align: center;
-				line-height: 1;
+				line-height: 1.4;
 			}
 			.title h1 {
 				margin: 0 0 0.5em 0;
+				color: var(--text-primary);
+                font-size: 2.2rem;
 			}
 			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
+				margin-bottom: 1em;
+				color: var(--text-muted);
 			}
 			.last-updated-on {
 				font-style: italic;
 			}
+            
+            /* Typography adjustments for the article body */
+            .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+                color: var(--text-primary);
+                margin-top: 2em;
+                margin-bottom: 1em;
+            }
+            .prose a {
+                color: var(--accent);
+                text-decoration: underline;
+            }
+            .prose a:hover {
+                color: var(--accent-alt);
+            }
+            .prose ul, .prose ol {
+                padding-left: 1.5em;
+                margin-bottom: 1.5em;
+            }
+            .prose li {
+                margin-bottom: 0.5em;
+            }
+            .prose blockquote {
+                border-left: 4px solid var(--accent);
+                padding-left: 1rem;
+                margin-left: 0;
+                font-style: italic;
+                color: var(--text-muted);
+            }
 		</style>
 	</head>
 
@@ -62,20 +97,20 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				<div class="hero-image">
 					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
 				</div>
-				<div class="prose">
+				<div class="prose glass-panel">
 					<div class="title">
 						<div class="date">
 							<FormattedDate date={pubDate} />
 							{
 								updatedDate && (
 									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
+										(更新日: <FormattedDate date={updatedDate} />)
 									</div>
 								)
 							}
 						</div>
 						<h1>{title}</h1>
-						<hr />
+						<hr style="border: 0; border-top: 1px solid var(--border-light);" />
 					</div>
 					<slot />
 				</div>

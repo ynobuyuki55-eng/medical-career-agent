@@ -2,7 +2,7 @@
 title: "転職すべきタイミングはいつ？サインと具体的な準備期間について"
 description: "「今の仕事を辞めたい」と思った時が転職のタイミング？後悔しないための転職の最適な時期と、必要な準備期間について解説します。"
 pubDate: "2026-04-10"
-heroImage: "/blog-placeholder-2.jpg"
+heroImage: "../../assets/blog-placeholder-2.jpg"
 ---
 
 「今の仕事、このままでいいのかな…」

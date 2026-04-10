@@ -2,7 +2,7 @@
 title: "書類選考の通過率が劇的に上がる！職務経歴書の書き方とコツ"
 description: "「なかなか書類審査に通らない…」そんな悩みを解決。採用担当者の目に留まる職務経歴書の効果的な書き方や、実績のアピール方法を解説します。"
 pubDate: "2026-04-10"
-heroImage: "/blog-placeholder-3.jpg"
+heroImage: "../../assets/blog-placeholder-3.jpg"
 ---
 
 転職活動における最初の関門、それが「書類選考」です。

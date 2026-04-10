@@ -2,7 +2,7 @@
 title: "面接で差がつく！必ず準備すべき自己PRと「逆質問」の戦略"
 description: "面接官に刺さる自己PRの作り方と、熱意をアピールする効果的な逆質問の例を紹介。内定の確率を高める面接対策の極意を公開します。"
 pubDate: "2026-04-10"
-heroImage: "/blog-placeholder-4.jpg"
+heroImage: "../../assets/blog-placeholder-4.jpg"
 ---
 
 書類選考を突破したらいよいよ面接です。

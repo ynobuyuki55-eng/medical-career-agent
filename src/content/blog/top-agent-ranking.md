@@ -2,7 +2,7 @@
 title: "【最新版】絶対に登録すべきおすすめ転職エージェント比較ランキング"
 description: "数ある転職エージェントの中から、実績・求人の質・サポート体制の3カテゴリーで独自に評価した、本当におすすめできるエージェントを厳選してご紹介します。"
 pubDate: "2026-04-10"
-heroImage: "/blog-placeholder-5.jpg"
+heroImage: "../../assets/blog-placeholder-5.jpg"
 ---
 
 「どのエージェントに登録すればいいか分からない…」

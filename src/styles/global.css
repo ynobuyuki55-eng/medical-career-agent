@@ -6,22 +6,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
 
 :root {
-	/* Premium Dark / Deep Navy & Emerald Theme */
-	--bg-main: #0b1120;
-	--bg-surface: rgba(30, 41, 59, 0.7);
-	--bg-surface-solid: #1e293b;
-	--bg-card: rgba(15, 23, 42, 0.8);
+	/* Clean Light / Soft Pink Theme */
+	--bg-main: #fcfcfd;
+	--bg-surface: rgba(255, 255, 255, 0.8);
+	--bg-surface-solid: #ffffff;
+	--bg-card: rgba(255, 255, 255, 0.9);
 
-	--accent: #10b981; /* Medical / Growth (Emerald) */
-	--accent-alt: #0ea5e9; /* Scientific / Trust (Ocean Blue) */
-	--accent-glow: rgba(16, 185, 129, 0.2);
+	--accent: #f472b6; /* Soft Pink */
+	--accent-alt: #fda4af; /* Rose Pink */
+	--accent-glow: rgba(244, 114, 182, 0.3);
 	
-	--text-primary: #f8fafc;
-	--text-secondary: #94a3b8;
-	--text-muted: #64748b;
+	--text-primary: #334155;
+	--text-secondary: #64748b;
+	--text-muted: #94a3b8;
 	
-	--border-light: rgba(255, 255, 255, 0.1);
-	--glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+	--border-light: rgba(0, 0, 0, 0.05);
+	--glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 	--glass-backdrop: blur(12px) saturate(180%);
 }
 
@@ -35,8 +35,8 @@ body {
 	padding: 0;
 	text-align: left;
 	background-color: var(--bg-main);
-	background-image: radial-gradient(circle at top right, rgba(16, 185, 129, 0.1), transparent 400px),
-					  radial-gradient(circle at bottom left, rgba(14, 165, 233, 0.1), transparent 400px);
+	background-image: radial-gradient(circle at top right, rgba(244, 114, 182, 0.15), transparent 400px),
+					  radial-gradient(circle at bottom left, rgba(253, 164, 175, 0.15), transparent 400px);
 	background-attachment: fixed;
 	color: var(--text-primary);
 	font-size: 16px;
@@ -94,8 +94,8 @@ p {
 
 .glass-panel:hover {
 	transform: translateY(-4px);
-	box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
-	border-color: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
+	border-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Gradient Text Effect */
@@ -146,7 +146,7 @@ p {
 
 .btn-primary:hover {
 	transform: translateY(-2px);
-	box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
+	box-shadow: 0 8px 25px rgba(244, 114, 182, 0.4);
 }
 
 /* Responsive */
